@@ -1,0 +1,12 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:insert="~{fragments/changelang.html :: header}"></header>
+<body>
+    <div th:replace="~{fragments/changelang.html :: body}"></div>
+    <li th:each="post : ${posts}"
+        th:object="${post}">
+        <span style="color:blue;font-weight: bolder;font-size: 30px;"
+        th:text="*{text}"></span>
+    </li>
+
+</body>
+</html>

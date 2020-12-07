@@ -1,0 +1,3 @@
+function cambiarIngles(){
+    alert("HOLA");
+}

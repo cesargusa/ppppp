@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body></body>
+    <h1 th:text="#{Main.Hello}"></h1>
+    <span th:text="#{lang.change}"></span>
+    <select id="locales" onclick="cambiarIdioma()">
+        <option value="" ></option>
+        <option value="en" th:text="#{lang.en}" ></option>
+        <option value="es" th:text="#{lang.es}"></option>
+    </select>
+</body>
+<script>
+
+function cambiarIdioma(){
+
+document.getElementById('locales').index;
+    location.href="https://www.google.es/";
+ 
+}
+</script>
+</html>

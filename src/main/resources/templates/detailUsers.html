@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:insert="~{fragments/changelang.html :: header}"></header>
+
+<body>
+   <form th:action="@{/v2/users}" th:object="${user}" method="POST">
+        <div th:replace="~{fragments/changelang.html :: body}">
+        </div>
+        <p><span th:text="#{id}"></span><input th:field="*{id}"></p>
+        <p><span th:text="#{name}"></span><input th:field="*{name}"></p>
+        <p><input type="submit" th:value="#{submit}"></p>
+
+        </form>
+</body>
+</html>

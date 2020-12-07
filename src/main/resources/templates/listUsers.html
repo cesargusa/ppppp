@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<header th:insert="~{fragments/changelang.html :: header}">
+
+</header>
+<body>
+    <div th:replace="~{fragments/changelang.html :: body}"></div>
+    <li th:each="user : ${users}"
+        th:object="${user}">
+        <span style="color:red;font-weight: bolder;font-size: 30px;"
+        th:text="*{name}"></span>
+<!--         <a th:href="@{/posts(userId=*{id})}">Posts</a>
+ -->        <a th:href="*{postsURL}">Posts</a>
+            <a th:href="*{editUser}">Edit</a>
+    </li>
+
+</body>
+</html>
